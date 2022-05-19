@@ -14,6 +14,8 @@ public class Actor : MapObject
     public float MoveSpeed = 5.0f;
     public int InitialHealth;
 
+    protected Animator animator;
+    //used also to handle animations
     public enum eActorState
     {
         Idle,
@@ -21,11 +23,31 @@ public class Actor : MapObject
         Attacking,
         Dead
     }
+
     public eActorState ActorState;
 
     Actor attackTarget;
     float attackDuration = 0.5f;
     float attackStartTime;
+
+    void GoToState(eActorState _state) {
+        if (animator != null) {
+            switch (_state) {
+                case eActorState.Idle:
+                    animator.SetTrigger("Stop");
+                    break;
+                case eActorState.Moving:
+                    animator.SetTrigger("Move");
+                    break;
+                case eActorState.Attacking:
+                    animator.SetTrigger("Dead");
+                    break;
+                case eActorState.Dead:
+                    animator.SetTrigger("Attack");
+                    break;
+            }
+        }
+    }
     //===================================================================
     public void SetPosition(Vector2Int _position)
     {
