@@ -1,5 +1,7 @@
 using UnityEngine;
 
+// faccio estendere a questa classe la classe MonoSingleton<Controller>, in questo modo implementa
+// il design pattern singleton
 public class GameController : MonoSingleton<GameController>
 {
     public FollowCamera FollowCamera;
@@ -7,7 +9,7 @@ public class GameController : MonoSingleton<GameController>
     public GameObject PlayerPrefab;
     private Player player;
     public Player Player { get { return player; } }
-
+    //===================================================================
     public enum eGameState
     {
         InTown,
@@ -15,7 +17,7 @@ public class GameController : MonoSingleton<GameController>
         MonsterTurn
     }
     public eGameState GameState = eGameState.PlayerTurn;
-
+    //===================================================================
     public void GoToState(eGameState _state)
     {
         GameState = _state;
@@ -32,19 +34,19 @@ public class GameController : MonoSingleton<GameController>
                 break;
         }
     }
-
+    //===================================================================
     private void Start()
     {
         StartNewGame();
     }
-
+    //===================================================================
     void StartNewGame()
     {
         CreatePlayer();
         DungeonController.Instance.CreateNewDungeon();
         GoToState(eGameState.PlayerTurn);
     }
-
+    //===================================================================
     void CreatePlayer()
     {
         GameObject playerGO = Instantiate(PlayerPrefab, Vector3.zero, Quaternion.identity);
@@ -52,7 +54,7 @@ public class GameController : MonoSingleton<GameController>
         player.Reset();
         FollowCamera.Target = playerGO.transform;
     }
-
+    //===================================================================
     public void ExitDungeon()
     {
         GoToState(eGameState.InTown);

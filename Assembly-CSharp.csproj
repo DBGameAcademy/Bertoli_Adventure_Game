@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{58D74214-7FFD-30F9-0984-269C300F9157}</ProjectGuid>
+    <ProjectGuid>{809F478F-9DF4-7460-27B4-8C6673564CF6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,45 +56,45 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\MonsterCollection.cs" />
+    <Compile Include="Assets\Scripts\Actors\Monsters\MonsterCollection.cs" />
     <Compile Include="Assets\Scripts\UI\CharacterWindowUI.cs" />
     <Compile Include="Assets\Scripts\FollowCamera.cs" />
-    <Compile Include="Assets\Scripts\MonsterPrototype.cs" />
+    <Compile Include="Assets\Scripts\Actors\Monsters\MonsterPrototype.cs" />
     <Compile Include="Assets\Scripts\Items\ArmourItem.cs" />
-    <Compile Include="Assets\Scripts\TilePrototype.cs" />
+    <Compile Include="Assets\Scripts\Doungeon\TilePrototype.cs" />
     <Compile Include="Assets\AdventureGame.cs" />
     <Compile Include="Assets\Scripts\Items\ItemSlot.cs" />
     <Compile Include="Assets\Scripts\UI\UIController.cs" />
     <Compile Include="Assets\Scripts\Items\DraggableItem.cs" />
-    <Compile Include="Assets\Scripts\Dungeon.cs" />
+    <Compile Include="Assets\Scripts\Doungeon\Dungeon.cs" />
     <Compile Include="Assets\Scripts\MonoSingleton.cs" />
-    <Compile Include="Assets\Scripts\Actor.cs" />
+    <Compile Include="Assets\Scripts\Actors\Actor.cs" />
     <Compile Include="Assets\Scripts\UI\ShopItemSlot.cs" />
-    <Compile Include="Assets\Scripts\Floor.cs" />
+    <Compile Include="Assets\Scripts\Doungeon\Floor.cs" />
     <Compile Include="Assets\Scripts\Items\ConsumableItem.cs" />
     <Compile Include="Assets\Scripts\Items\ItemCollection.cs" />
-    <Compile Include="Assets\Scripts\Quest.cs" />
-    <Compile Include="Assets\Scripts\QuestCollection.cs" />
+    <Compile Include="Assets\Scripts\QuestSystem\Quest.cs" />
+    <Compile Include="Assets\Scripts\QuestSystem\QuestCollection.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\Items\PlayerInventoryUI.cs" />
-    <Compile Include="Assets\Scripts\Reward.cs" />
+    <Compile Include="Assets\Scripts\QuestSystem\Reward.cs" />
     <Compile Include="Assets\Scripts\UI\TownUI.cs" />
-    <Compile Include="Assets\Scripts\Door.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\Doungeon\Door.cs" />
+    <Compile Include="Assets\Scripts\Actors\Player.cs" />
     <Compile Include="Assets\Scripts\UI\QuestGiverUI.cs" />
-    <Compile Include="Assets\Scripts\TileSet.cs" />
-    <Compile Include="Assets\Scripts\Tile.cs" />
-    <Compile Include="Assets\Scripts\MapObject.cs" />
+    <Compile Include="Assets\Scripts\Doungeon\TileSet.cs" />
+    <Compile Include="Assets\Scripts\Doungeon\Tile.cs" />
+    <Compile Include="Assets\Scripts\Doungeon\MapObject.cs" />
     <Compile Include="Assets\Scripts\Items\ItemController.cs" />
-    <Compile Include="Assets\Scripts\MonsterController.cs" />
-    <Compile Include="Assets\Scripts\Room.cs" />
+    <Compile Include="Assets\Scripts\Actors\Monsters\MonsterController.cs" />
+    <Compile Include="Assets\Scripts\Doungeon\Room.cs" />
     <Compile Include="Assets\Scripts\Items\WeaponItem.cs" />
     <Compile Include="Assets\Scripts\Items\Item.cs" />
-    <Compile Include="Assets\Scripts\Monster.cs" />
+    <Compile Include="Assets\Scripts\Actors\Monsters\Monster.cs" />
     <Compile Include="Assets\Scripts\UI\ShopWindow.cs" />
-    <Compile Include="Assets\Scripts\QuestManager.cs" />
-    <Compile Include="Assets\Scripts\DungeonController.cs" />
-    <Compile Include="Assets\Scripts\QuestObjective.cs" />
+    <Compile Include="Assets\Scripts\QuestSystem\QuestManager.cs" />
+    <Compile Include="Assets\Scripts\Doungeon\DungeonController.cs" />
+    <Compile Include="Assets\Scripts\QuestSystem\QuestObjective.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -667,51 +667,51 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
-      <Project>{DBD61E92-D85C-2D0A-965D-D7FC8501E373}</Project>
+      <Project>{43E4AF43-E449-FEE0-2BAE-5CAC0546775D}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{59C5C222-D7C3-2453-3B2A-335328076F09}</Project>
+      <Project>{80CD5F11-54C3-7681-90E9-0FD325D59FBE}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
-      <Project>{3A21C295-9F15-0F45-A94F-FF7858CD7A9C}</Project>
+      <Project>{545AC0E5-2575-41FA-F841-E98204A9227B}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{1D1DE92E-F054-C4DE-5C2A-35CE96BDE354}</Project>
+      <Project>{66BD5E21-5F25-5AA6-0C5C-FD1487A336A4}</Project>
       <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{CF9E3DB3-E524-E388-10B8-EAEAB1C5C556}</Project>
+      <Project>{4C29D0F9-FCA1-E30F-2018-1B264E433AE7}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{E8640EF0-DA0A-A285-6C3F-3EF444A5FF4A}</Project>
+      <Project>{AE9BFD9A-4361-E8B1-07EB-3DDE53BE7E63}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
-      <Project>{5B1BAC1D-5FA6-A442-0AAA-D5EB7F861A4B}</Project>
+      <Project>{77845836-37F5-6815-B649-5EAF89D06037}</Project>
       <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{8C4AC9A4-0F72-678C-F713-3D8F9ADEEE85}</Project>
+      <Project>{DB81D3A8-8071-FC90-0F94-063D086CFE69}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InputSystem.csproj">
-      <Project>{5710D833-7DD6-C064-8504-7F8EB08DE55D}</Project>
+      <Project>{E9FE9F37-2C21-F6E8-C3FF-9C3A308D8D50}</Project>
       <Name>Unity.InputSystem</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{D5F1D0BA-DDA9-3E07-35D3-BE8116E88E1E}</Project>
+      <Project>{97356B4B-0478-83DD-3A60-49F191AEA2A5}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{DC445CAB-4EFF-C648-385E-6A10784D5C7D}</Project>
+      <Project>{6DA89C22-F87C-9DDA-EEE3-643AD97284F5}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
-      <Project>{9D2E3F17-0473-2948-F9A7-B59ACB520B96}</Project>
+      <Project>{A7A54BEB-7D0F-9AF2-72C8-95891CD27AAE}</Project>
       <Name>Unity.PlasticSCM.Editor</Name>
     </ProjectReference>
   </ItemGroup>

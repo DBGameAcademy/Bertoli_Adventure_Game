@@ -6,7 +6,7 @@ public class FollowCamera : MonoBehaviour
 {
     public Transform Target;
     public Vector3 Offset;
-    public float Damping = 5.0f;
+    public float Damping = 5.0f; //indicates how fast the camera follows up the player
 
     private void Update()
     {
